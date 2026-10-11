@@ -21,7 +21,15 @@ function App() {
   const buyBtn = (item) => {
     updateProduct([...cartProduct, item]);
     updateCart(initial + 1);
+    updatePrc(totalPrc + item.price);
   };
+  const removeHandle = (itemRemove) => {
+    updateCart(initial - 1);
+    updatePrc(totalPrc - itemRemove.price);
+    const updatedList = cartProduct.filter((item) => item.id !== itemRemove.id);
+    updateProduct(updatedList);
+  };
+  const [totalPrc, updatePrc] = useState(0);
 
   const data = use(promise);
   console.log(data);
@@ -37,6 +45,8 @@ function App() {
         buyBtn={buyBtn}
         data={data}
         activeView={activeView}
+        totalPrc={totalPrc}
+        removeHandle={removeHandle}
       ></Products>
     </>
   );

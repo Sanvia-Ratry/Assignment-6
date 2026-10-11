@@ -1,7 +1,17 @@
 import Card from "./card";
 import CartProduct from "./cartProduct";
 
-const Products = ({ data, buyBtn, Count, cartProduct, productBtn, cartBtn, activeView }) => {
+const Products = ({
+  data,
+  buyBtn,
+  Count,
+  cartProduct,
+  productBtn,
+  cartBtn,
+  activeView,
+  totalPrc,
+  removeHandle,
+}) => {
   return (
     <>
       <div className="px-50 py-30 flex flex-col gap-10">
@@ -43,7 +53,13 @@ const Products = ({ data, buyBtn, Count, cartProduct, productBtn, cartBtn, activ
           <Card cartProduct={cartProduct} buyBtn={buyBtn} data={data}></Card>
         )}
 
-        {activeView === "cartView" && <CartProduct cartProduct={cartProduct}></CartProduct>}
+        {activeView === "cartView" && (
+          <CartProduct
+            removeHandle={removeHandle}
+            totalPrc={totalPrc}
+            cartProduct={cartProduct}
+          ></CartProduct>
+        )}
       </div>
     </>
   );

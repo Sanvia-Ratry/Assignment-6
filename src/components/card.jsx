@@ -6,16 +6,29 @@ const Card = ({ data, buyBtn, cartProduct }) => {
       <div className="grid grid-cols-3 gap-7.5">
         {data.map((item) => {
           const isAdded = cartProduct.some((cartItem) => cartItem.id === item.id);
-
+          const badge = item.badge;
           return (
             <div key={item.id} className="p-6 border border-gray-300 rounded-2xl space-y-4">
-              <div>
+              <div className="flex justify-between items-start">
                 <span className="border border-gray-200 p-2 rounded-3xl">{item.icon}</span>
+                <button
+                  className={`text-xs px-3 py-1.5 ${
+                    badge === "Most Popular"
+                      ? "bg-amber-200 text-amber-700 border border-none rounded-full"
+                      : badge === "New"
+                        ? "bg-green-200 text-green-700 border border-none rounded-full"
+                        : badge === "Best Seller"
+                          ? "bg-purple-200 text-purple-700 border border-none rounded-full"
+                          : "hidden"
+                  }`}
+                >
+                  {item.badge}
+                </button>
               </div>
               <h2 className="font-bold text-2xl">{item.name}</h2>
               <p>{item.description}</p>
               <h2>
-                <span className="font-bold text-2xl">\$ {item.price}</span>/mo
+                <span className="font-bold text-2xl">$ {item.price}</span>/mo
               </h2>
 
               <ul>
