@@ -17,7 +17,7 @@ const Banner = () => {
           place. Start creating faster today.<br></br> Explore Products
         </p>
         <div className="flex gap-4">
-          <button className="font-semibold text-white px-4 py-3 border border-none bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-3xl">
+          <button className="font-semibold text-white px-4 py-3 border border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-3xl">
             Explore Products
           </button>
           <button className="text-purple-600 font-semibold px-4 py-3 border-2 border-purple-600  rounded-3xl flex gap-2.5 items-center">

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "Immersive sound with comfortable, all-day listening. Amazing base with no noise",
+    "price": 79.99,
+    "features": ["Noise cancellation", "30-hour battery", "Bluetooth 5.3"],
+    "badge": "Most Popular",
+    "icon": "🎧"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "description": "Track your activity and stay connected throughout the day.",
+    "price": 129.99,
+    "features": ["Heart rate tracking", "Sleep monitoring", "Water resistant"],
+    "badge": "Best Seller",
+    "icon": "⌚"
+  },
+  {
+    "id": 3,
+    "name": "Portable Speaker",
+    "description": "Powerful, room-filling sound in a compact design.",
+    "price": 49.99,
+    "features": ["12-hour playback", "Water resistant", "Deep bass"],
+    "badge": "New",
+    "icon": "🔊"
+  },
+  {
+    "id": 4,
+    "name": "Mechanical Keyboard",
+    "description": "A responsive keyboard built for work and gaming.",
+    "price": 89.99,
+    "features": ["Tactile switches", "RGB lighting", "USB-C connection"],
+    "badge": "Most Popular",
+    "icon": "⌨️"
+  },
+  {
+    "id": 5,
+    "name": "Wireless Mouse",
+    "description": "Enjoy precise control and a comfortable ergonomic shape.",
+    "price": 34.99,
+    "features": ["Adjustable DPI", "Silent clicks", "Rechargeable battery"],
+    "badge": "Best Seller",
+    "icon": "🖱️"
+  },
+  {
+    "id": 6,
+    "name": "USB-C Hub",
+    "description": "Expand your laptop connectivity with one compact hub.",
+    "price": 39.99,
+    "features": ["6-in-1 ports", "4K HDMI output", "Fast data transfer"],
+    "badge": "New",
+    "icon": "🔌"
+  },
+  {
+    "id": 7,
+    "name": "Laptop Stand",
+    "description": "Create a more comfortable and organized workspace.",
+    "price": 44.99,
+    "features": ["Adjustable height", "Foldable design", "Aluminum body"],
+    "badge": "Most Popular",
+    "icon": "💻"
+  },
+  {
+    "id": 8,
+    "name": "Power Bank",
+    "description": "Keep your devices charged while you're on the go.",
+    "price": 29.99,
+    "features": ["20000mAh capacity", "Fast charging", "Dual USB output"],
+    "badge": "Best Seller",
+    "icon": "🔋"
+  },
+  {
+    "id": 9,
+    "name": "Webcam",
+    "description": "Look sharp on video calls, meetings, and live streams.",
+    "price": 59.99,
+    "features": ["1080p resolution", "Built-in microphone", "Auto light correction"],
+    "badge": "New",
+    "icon": "📷"
+  }
+]

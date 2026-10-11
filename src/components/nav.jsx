@@ -1,6 +1,6 @@
 import Cart from "./cart";
 
-const Nav = () => {
+const Nav = ({ Count }) => {
   return (
     <>
       <div className="nav flex justify-between items-center mx-50 py-4">
@@ -15,9 +15,9 @@ const Nav = () => {
           </ol>
         </div>
         <div className=" flex items-center gap-4 font-semibold">
-          <Cart></Cart>
+          <Cart Count={Count}></Cart>
           <button>Login</button>
-          <button className="text-white px-4 py-3 border border-none bg-gradient-to-r from-[#4F39F6] to-[#9514FA] rounded-3xl">
+          <button className="text-white px-4 py-3 border border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-3xl">
             Get Started
           </button>
         </div>
