@@ -3,6 +3,8 @@ import "./App.css";
 import Banner from "./components/banner";
 import Nav from "./components/nav";
 import Products from "./components/products";
+import Rating from "./components/rating";
+import Footer from "./components/footer";
 
 const promise = fetch("data.json").then((res) => res.json());
 
@@ -37,6 +39,7 @@ function App() {
     <>
       <Nav Count={initial}></Nav>
       <Banner></Banner>
+      <Rating></Rating>
       <Products
         productBtn={productBtn}
         cartBtn={cartBtn}
@@ -48,6 +51,7 @@ function App() {
         totalPrc={totalPrc}
         removeHandle={removeHandle}
       ></Products>
+      <Footer></Footer>
     </>
   );
 }
