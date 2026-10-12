@@ -6,6 +6,10 @@ import Products from "./components/products";
 import Rating from "./components/rating";
 import Footer from "./components/footer";
 
+import Explore from "./components/explore";
+import Pricing from "./components/pricing";
+import Manual from "./components/manual";
+
 const promise = fetch("data.json").then((res) => res.json());
 
 function App() {
@@ -51,6 +55,9 @@ function App() {
         totalPrc={totalPrc}
         removeHandle={removeHandle}
       ></Products>
+      <Manual></Manual>
+      <Pricing></Pricing>
+      <Explore></Explore>
       <Footer></Footer>
     </>
   );
