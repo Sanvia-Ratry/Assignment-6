@@ -3,3 +3,19 @@
 body {
   font-family: "manrope", sans-serif;
 }
+
+.Toastify__toast--success {
+  background: white !important; /* Your custom green */
+  color: purple !important;
+}
+.Toastify__toast--warning {
+  background: white !important; /* Your custom green */
+  color: rgb(158, 17, 17) !important;
+}
+
+.Toastify__progress-bar--success {
+  background: rgb(38, 95, 38) !important;
+}
+.Toastify__progress-bar--warning {
+  background: rgb(158, 17, 17) !important;
+}

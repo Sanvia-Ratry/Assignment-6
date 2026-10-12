@@ -11,6 +11,7 @@ const Products = ({
   activeView,
   totalPrc,
   removeHandle,
+  checkoutBtn,
 }) => {
   return (
     <>
@@ -55,6 +56,7 @@ const Products = ({
 
         {activeView === "cartView" && (
           <CartProduct
+            checkoutBtn={checkoutBtn}
             removeHandle={removeHandle}
             totalPrc={totalPrc}
             cartProduct={cartProduct}

@@ -1,6 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 
-const CartProduct = ({ cartProduct, totalPrc, removeHandle }) => {
+const CartProduct = ({ cartProduct, totalPrc, removeHandle, checkoutBtn }) => {
   const total = totalPrc.toFixed(2);
   return (
     <div className="border border-gray-300 rounded-3xl p-10 space-y-4">
@@ -42,7 +42,10 @@ const CartProduct = ({ cartProduct, totalPrc, removeHandle }) => {
               $<span>{total}</span>
             </h2>
           </div>
-          <button className="w-full text-white px-4 py-3 border border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-3xl">
+          <button
+            onClick={() => checkoutBtn(cartProduct)}
+            className="w-full text-white px-4 py-3 border border-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-3xl"
+          >
             Proceed to checkout
           </button>
         </>

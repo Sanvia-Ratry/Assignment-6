@@ -9,6 +9,9 @@ import Footer from "./components/footer";
 import Explore from "./components/explore";
 import Pricing from "./components/pricing";
 import Manual from "./components/manual";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaceAngryIcon, HandCoins, ShoppingBasket } from "lucide-react";
 
 const promise = fetch("data.json").then((res) => res.json());
 
@@ -28,12 +31,26 @@ function App() {
     updateProduct([...cartProduct, item]);
     updateCart(initial + 1);
     updatePrc(totalPrc + item.price);
+    toast.success("Added to your cart....", { icon: <ShoppingBasket></ShoppingBasket> });
   };
   const removeHandle = (itemRemove) => {
     updateCart(initial - 1);
     updatePrc(totalPrc - itemRemove.price);
     const updatedList = cartProduct.filter((item) => item.id !== itemRemove.id);
     updateProduct(updatedList);
+    toast.warning("Product removed...", {
+      icon: <FaceAngryIcon></FaceAngryIcon>,
+    });
+  };
+  const checkoutBtn = (items) => {
+    console.log("checkOut Button clicked...", items);
+    const updatedList = [];
+    updateProduct(updatedList);
+    updateCart(0);
+    updatePrc(0);
+    toast.success("Checkout", {
+      icon: <HandCoins></HandCoins>,
+    });
   };
   const [totalPrc, updatePrc] = useState(0);
 
@@ -54,11 +71,13 @@ function App() {
         activeView={activeView}
         totalPrc={totalPrc}
         removeHandle={removeHandle}
+        checkoutBtn={checkoutBtn}
       ></Products>
       <Manual></Manual>
       <Pricing></Pricing>
       <Explore></Explore>
       <Footer></Footer>
+      <ToastContainer position="top-right" autoClose={1000} />
     </>
   );
 }
