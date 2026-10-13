@@ -5,11 +5,11 @@ body {
 }
 
 .Toastify__toast--success {
-  background: white !important; /* Your custom green */
+  background: white !important; 
   color: purple !important;
 }
 .Toastify__toast--warning {
-  background: white !important; /* Your custom green */
+  background: white !important; 
   color: rgb(158, 17, 17) !important;
 }
 
