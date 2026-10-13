@@ -15,9 +15,9 @@ const Products = ({
 }) => {
   return (
     <>
-      <div className="px-50 py-30 flex flex-col gap-10">
+      <div className="px-15 sm:px-20 lg:px-40 xl:px-50 py-15 sm:py-20 md:py-30 flex flex-col gap-10">
         <div className="flex flex-col items-center text-center space-y-4">
-          <h1 className="font-extrabold text-5xl">Premium Digital Tools</h1>
+          <h1 className="font-extrabold text-4xl sm:text-5xl">Premium Digital Tools</h1>
           <p className="text-[20px] text-[#627382]">
             Choose from our curated collection of premium digital products designed <br></br>to
             boost your productivity and creativity.

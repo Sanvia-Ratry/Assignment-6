@@ -52,13 +52,18 @@ function App() {
       icon: <HandCoins></HandCoins>,
     });
   };
+  const [menu, setMenu] = useState(false);
+  const menuToggle = () => {
+    console.log(menu);
+    setMenu(!menu);
+  };
   const [totalPrc, updatePrc] = useState(0);
 
   const data = use(promise);
   console.log(data);
   return (
     <>
-      <Nav Count={initial}></Nav>
+      <Nav Count={initial} menu={menu} menuToggle={menuToggle}></Nav>
       <Banner></Banner>
       <Rating></Rating>
       <Products

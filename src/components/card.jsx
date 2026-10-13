@@ -3,12 +3,15 @@ import { Check } from "lucide-react";
 const Card = ({ data, buyBtn, cartProduct }) => {
   return (
     <>
-      <div className="grid grid-cols-3 gap-7.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
         {data.map((item) => {
           const isAdded = cartProduct.some((cartItem) => cartItem.id === item.id);
           const badge = item.badge;
           return (
-            <div key={item.id} className="p-6 border border-gray-300 rounded-2xl space-y-4">
+            <div
+              key={item.id}
+              className="h-full flex flex-col gap-4 p-6 border border-gray-300 rounded-2xl"
+            >
               <div className="flex justify-between items-start">
                 <span className="border border-gray-200 p-2 rounded-3xl">{item.icon}</span>
                 <button
@@ -42,7 +45,7 @@ const Card = ({ data, buyBtn, cartProduct }) => {
               <button
                 onClick={() => buyBtn(item)}
                 disabled={isAdded}
-                className={`w-full text-white px-4 py-3 border border-none rounded-2xl transition-all ${
+                className={`w-full mt-auto  text-white px-4 py-3 border border-none rounded-2xl transition-all ${
                   isAdded
                     ? `bg-green-600 cursor-not-allowed`
                     : "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
@@ -51,7 +54,7 @@ const Card = ({ data, buyBtn, cartProduct }) => {
                 {isAdded ? (
                   <>
                     <span className="flex items-center justify-center gap-2">
-                      <Check className="w-4 h-4" />
+                      <Check className="hidden sm:block sm:w-4 sm:h-4" />
                       <span>Added to the cart</span>
                     </span>
                   </>

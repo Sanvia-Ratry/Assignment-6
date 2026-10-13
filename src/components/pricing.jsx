@@ -1,16 +1,16 @@
 import { Check } from "lucide-react";
-
+//px-20 sm:px-30 md:px-40 lg:px-50 py-20 md:py-30
 const Pricing = () => {
   return (
-    <div className="flex flex-col gap-10 px-50 py-30">
+    <div className="flex flex-col gap-10 px-15 sm:px-20 md:px-35 lg:px-50 py-15 md:py-30">
       <div className="space-y-4 text-center">
-        <h1 className="font-extrabold text-5xl">Simple, Transparent Pricing</h1>
+        <h1 className="font-extrabold text-3xl sm:text-5xl">Simple, Transparent Pricing</h1>
         <p className="text-gray-500">
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-7.5">
-        <div className="gap-6 px-6 py-6 flex flex-col border rounded-3xl border-gray-100  bg-[#F9FAFC]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
+        <div className="gap-6 px-6 py-6 flex flex-col border rounded-3xl border-gray-200  bg-[#F9FAFC]">
           <div>
             <h2 className="font-bold text-2xl">Starter</h2>
             <p className="text-gray-500">Perfect for getting started</p>
@@ -37,7 +37,7 @@ const Pricing = () => {
           </button>
         </div>
         <div className="relative gap-6 px-6 py-6 flex flex-col border border-none rounded-3xl border-white  bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
-          <button className="absolute -top-3 right-25 px-3 py-1 border border-none rounded-4xl bg-amber-100 text-amber-600">
+          <button className="absolute -top-3 translate-x-20 px-3 py-1 border border-none rounded-4xl bg-amber-100 text-amber-600">
             Most Popular
           </button>
           <div>
@@ -71,7 +71,7 @@ const Pricing = () => {
             Start Pro Trial
           </button>
         </div>
-        <div className="gap-6 px-6 py-6 flex flex-col border rounded-3xl border-gray-100  bg-[#F9FAFC]">
+        <div className="gap-6 px-6 py-6 flex flex-col border rounded-3xl border-gray-200  bg-[#F9FAFC]">
           <div>
             <h2 className="font-bold text-2xl">Enterprise</h2>
             <p className="text-gray-500">Perfect for getting started</p>
